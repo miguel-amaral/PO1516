@@ -6,10 +6,6 @@
 #include <forward_list>
 #include <list>
 
-class CellAlreadyExists{};
-class NoSuchCell{};
-
-
 class Cell {
 private:
   std::pair <int,int> _coords;
@@ -30,7 +26,6 @@ public:
   }
 
   virtual int getValue() =0;
-  //virtual getElement() =0;
   friend bool operator<( Cell& l,  Cell& r) {
        return l.getValue() < r.getValue();
    }
@@ -42,8 +37,8 @@ public:
     cell.print(os);
     return os;
   }
-  //redefinir operator <<
 };
+
 class IntCell : public Cell {
 private:
   int _element=0;
@@ -64,6 +59,7 @@ public:
     os << _element;
   }
 };
+
 class StringCell : public Cell {
 private:
   std::string _element="";
@@ -71,10 +67,6 @@ public:
   StringCell(int x, int y, std::string string): Cell(x,y){
     _element = string;
   }
-  /*
-  void setValue(int newValue){
-    _element = newValue;
-  }*/
   int getValue(){
     return 0;
   }
@@ -85,6 +77,7 @@ public:
     os << _element;
   }
 };
+
 class RefCell : public Cell {
 private:
   std::shared_ptr<Cell> _element;
@@ -101,16 +94,14 @@ public:
     os << *_element;
   }
 };
+
 class FormulaCell : public Cell {
 private:
   std::list< std::shared_ptr<Cell> > _mylist;
-
 public:
-
   FormulaCell(int my_x, int my_y, std::list< std::shared_ptr<Cell> > lista)\
                                                               : Cell(my_x,my_y){
     _mylist = lista;
-    //_element = cell;
   }
   int getValue(){
     int soma =0;
@@ -130,12 +121,10 @@ public:
   }
 };
 
-
 class CalcSheet {
 private:
   std::map<std::pair<int ,int>, std::shared_ptr<Cell> > _myMap;
 public:
-
   std::shared_ptr<Cell> getCell(std::pair <int,int> pair){
     std::map<std::pair <int,int>, std::shared_ptr<Cell> >::iterator it;
     it = _myMap.find(pair);
@@ -157,6 +146,7 @@ public:
       << " | y=" << coords.second <<"] ja estao em uso" << std::endl;
     }
   }
+
   friend std::ostream &operator<<(std::ostream &os, CalcSheet &folha) {
     os << "\e[33m[INFO]\e[0m printing CalcSheet" << std::endl;
     for (auto& elem : folha._myMap){
@@ -169,7 +159,6 @@ public:
     os << "\e[33m[INFO]\e[0m --end" << std::endl;
     return os;
   }
-
 };
 
 int main(){
@@ -195,14 +184,13 @@ int main(){
     std::shared_ptr<FormulaCell> c8 = \
                 std::make_shared<FormulaCell>(1,1,lista2);
 
-
     std::cout << "c7 value: " << c7->getValue() << std::endl;
     std::cout << "c8 value: " << c8->getValue() << std::endl;
-
     std::cout << "c1: " << *c1 << std::endl;
     std::cout << "c2: " << *c2 << std::endl;
     std::cout << "c3: " << *c3 << std::endl;
     std::cout << "c4: " << *c4 << std::endl;
+
     c1->setValue(11);
     folha->addCell(c1);
     folha->addCell(c2);
