@@ -1,0 +1,4 @@
+
+
+
+Quando criamos um documento vazio, e o tentarmos guardar, qual deve ser a abordagem que a interface deve tomar?
