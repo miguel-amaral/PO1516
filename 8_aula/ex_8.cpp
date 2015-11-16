@@ -47,7 +47,6 @@ int main(){
   std::cout << *c2 << std::endl;
   std::cout << *c3 << std::endl;
 
-
   /* Put Cats in stream */
   std::stringstream stream1;
   stream1 << *c2;
@@ -56,7 +55,7 @@ int main(){
   /* Create 2 new clean cats*/
   std::shared_ptr<Cat> c4 = std::make_shared<Cat>();
   std::shared_ptr<Cat> c5 = std::make_shared<Cat>();
-
+  
   /*REcover cats from the stream*/
   stream1 >> *c4;
   stream1 >> *c5;
@@ -65,9 +64,5 @@ int main(){
   std::cout << "Recovered Cats" << std::endl;
   std::cout << *c4 << std::endl;
   std::cout << *c5 << std::endl;
-
-
-
-
-
+  return 0;
 }
