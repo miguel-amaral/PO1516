@@ -1,4 +1,8 @@
+JAVADIR=/usr/share/java
+java -Dimport=./edt-textui/test.import -cp $JAVADIR/po-uilib.jar:$JAVADIR/edt-support.jar:edt-core/edt-core.jar:edt-textui/edt-textui.jar edt.textui.TextEditor
 
 
+Quando criamos um documento vazio (isto é, pelo menos sem titulo nem qualquer autor), e o tentarmos guardar, qual deve ser a abordagem que a interface deve tomar?
+  Podemos ignorar !!!!! YAY
 
-Quando criamos um documento vazio, e o tentarmos guardar, qual deve ser a abordagem que a interface deve tomar?
+Visitor para o imprimir, OVERKILL??
