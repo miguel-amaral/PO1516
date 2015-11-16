@@ -5,4 +5,4 @@ java -Dimport=./edt-textui/test.import -cp $JAVADIR/po-uilib.jar:$JAVADIR/edt-su
 Quando criamos um documento vazio (isto é, pelo menos sem titulo nem qualquer autor), e o tentarmos guardar, qual deve ser a abordagem que a interface deve tomar?
   Podemos ignorar !!!!! YAY
 
-Visitor para o imprimir, OVERKILL??
+Visitor para o imprimir, OVERKILL?? Nao e
