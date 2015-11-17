@@ -6,3 +6,11 @@ Quando criamos um documento vazio (isto é, pelo menos sem titulo nem qualquer a
   Podemos ignorar !!!!! YAY
 
 Visitor para o imprimir, OVERKILL?? Nao e
+
+
+Como chamo à package do visitor?
+O listSections pode ser um outro visitor?
+o SectionCommand é editor e section ou logo document? logo Document Ramos FIXME
+chamar novo visitor dentro de visitor?
+    no metodo visitSection do visitor_1:
+          element.accept(complete_diferent_visitor)
