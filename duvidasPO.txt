@@ -1,16 +1,15 @@
-JAVADIR=/usr/share/java
-java -Dimport=./edt-textui/test.import -cp $JAVADIR/po-uilib.jar:$JAVADIR/edt-support.jar:edt-core/edt-core.jar:edt-textui/edt-textui.jar edt.textui.TextEditor
-
-
 Quando criamos um documento vazio (isto é, pelo menos sem titulo nem qualquer autor), e o tentarmos guardar, qual deve ser a abordagem que a interface deve tomar?
   Podemos ignorar !!!!! YAY
 
-Visitor para o imprimir, OVERKILL?? Nao e
 
+o SectionCommand é editor e section ou logo document? logo Document Ramos FIXME
 
 Como chamo à package do visitor?
 O listSections pode ser um outro visitor?
-o SectionCommand é editor e section ou logo document? logo Document Ramos FIXME
+  Se usarmos visitor entao temos de imprimir apenas as secçoes, podemos deixar o outro com apenas new(), return new()
 chamar novo visitor dentro de visitor?
     no metodo visitSection do visitor_1:
           element.accept(complete_diferent_visitor)
+    valido??
+Compatibilidade com XML é usar visitor ao fazer import?
+Compatibilidade com XML é usar visitor ao fazer mostrar conteudo?
