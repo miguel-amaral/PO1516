@@ -8,4 +8,6 @@ chamar novo visitor dentro de visitor?
 in getSection
   if (size == 0 || id > size || id < 0 )
 
-se ja faco a associacao entre uniqID e TextElement no hashmap do document continuo a precisar de guardar o unicID no TextElement??
+Descontados quando usamos string[]??
+
+quando vai ser feita sessao de C++ e de BASH
