@@ -6,7 +6,7 @@ protected:
   std::shared_ptr<Machine> _machine;
 public:
   MachineState(std::shared_ptr<Machine> machine): _machine(machine){}
-  std::string status(){ return "FU"; }
+  virtual std::string status() =0;
   void tick() { /*FIXME*/ }
   void power(){ /*FIXME*/ }
   void open() { /*FIXME*/ }
