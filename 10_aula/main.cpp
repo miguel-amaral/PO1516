@@ -1,6 +1,6 @@
 #include <iostream>
-#include "MachineState.cpp"
-#include "Machine.cpp"
+#include "MachineState.h"
+//#include "Machine.cpp"
 
 int main(int argc, char const *argv[]) {
 
