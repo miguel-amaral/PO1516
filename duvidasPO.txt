@@ -11,3 +11,20 @@ in getSection
 Descontados quando usamos string[]??
 
 quando vai ser feita sessao de C++ e de BASH
+
+
+
+
+
+
+removeSection:
+  //FIXME quem ve filhos?
+  //FIXME remover unicID do _document, pode ser no TEXTUI? isto e chamar funcao do document que elemina
+
+
+TextElement:
+  Posso ter set uniqueId = null
+  Antes de imprimir chamar o hasUnicId
+    caso true imprimir
+    else imprimir ""
+Fazer politica identica para fileName do document
