@@ -1,16 +1,16 @@
-import java.util.ArrayList;
-
-public class Company extends Taxpayer {
-    
+class Company : public Taxpayer {
+private:
+    std::list< std::shared_ptr<Person> > _employees;
+public:
     private ArrayList<Person> _employees = new ArrayList<>();
 
-    public double accept(FlexyIRS irs) {
+    double accept(FlexyIRS irs) {
         return irs.visitCompany(this);
     }
 
     // Os seguintes métodos são apenas para testar, não é necessário
     // implementar!
-
+/*
     public void addPerson(Person p) {
         _employees.add(p);
     }
@@ -21,5 +21,5 @@ public class Company extends Taxpayer {
 
     public int getSize() {
         return _employees.size();
-    }
+    }*/
 }
