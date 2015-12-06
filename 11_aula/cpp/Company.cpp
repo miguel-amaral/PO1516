@@ -2,24 +2,24 @@ class Company : public Taxpayer {
 private:
     std::list< std::shared_ptr<Person> > _employees;
 public:
-    private ArrayList<Person> _employees = new ArrayList<>();
 
-    double accept(FlexyIRS irs) {
-        return irs.visitCompany(this);
+    double accept(FlexyIRS *irs) {
+        return irs->visitCompany(this);
     }
 
     // Os seguintes métodos são apenas para testar, não é necessário
     // implementar!
-/*
-    public void addPerson(Person p) {
-        _employees.add(p);
+    void addPerson(std::shared_ptr<Person> p) {
+      _employees.push_back(std::move(p));
     }
 
-    public Person getPerson(int index) {
-        return _employees.get(index);
+    std::shared_ptr<Person> getPerson(int index) {
+        std::list<std::shared_ptr<Person>>::iterator i = _employees.begin();
+        std::advance(i, index);
+        return *i;
     }
 
-    public int getSize() {
+    int getSize() {
         return _employees.size();
-    }*/
-}
+    }
+};

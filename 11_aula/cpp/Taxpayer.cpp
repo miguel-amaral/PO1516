@@ -1,4 +1,5 @@
-class abstract Taxpayer {
+class  Taxpayer {
+
 public:
-    virtual double accept(FlexyIRS irs) =0;
-}
+    virtual double accept(FlexyIRS *irs) =0;
+};
