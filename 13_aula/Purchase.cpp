@@ -1,8 +1,16 @@
+#include "ProductType.cpp"
+
 class Purchase {
 private:
-	time_t date;
-	double value;
-	tipo_prod
-	std::string
+	std::time_t _date;
+	double _value;
+	std::string _paymentMethod;
+	std::shared_ptr<ProductType> _prodType;
 public:
+	Purchase(std::time_t date, std::string payment, double value,
+		 std::string prodType ) : _date(date), _paymentMethod(payment),
+		 												_value(value){
+		_prodType = std::make_shared<ProductType>(prodType);
+	}
+
 };
