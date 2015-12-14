@@ -6,5 +6,5 @@ private:
 public:
 	ProductType(std::string name) : _name(name) {}
 	std::string getName() { return _name; }
-	setName(std::string name) { _name = name; }
+	void setName(std::string name) { _name = name; }
 };
