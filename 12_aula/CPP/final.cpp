@@ -1,3 +1,5 @@
+/* Miguel Amaral 78865 Quarta-Feira 15h30 */
+ 
 /* -------------- */
 /*  TextItem.cpp  */
 /* -------------- */
@@ -67,7 +69,8 @@ public:
 
 class Underline : public TextFormat {
 public:
-    Underline(std::shared_ptr<TextItem> textItem) : TextFormat(textItem){}
+    Underline(std::shared_ptr<TextItem> textItem) : TextFormat(textItem)
+{}
 
     std::string render() {
         return "<u>" + TextFormat::render() + "</u>";
@@ -104,11 +107,14 @@ public:
 
 
 int main() {
-    std::shared_ptr<TextItem> span1 = std::make_shared<TextSpan>("BATATA");
+    std::shared_ptr<TextItem> span1 = 
+                                std::make_shared<TextSpan>("BATATA");
     std::shared_ptr<TextItem> text1 = std::make_shared<Bold>(span1);
-    std::shared_ptr<TextItem> text2 = std::make_shared<Underline>(std::make_shared<Bold>(std::make_shared<Italic>(span1)));
+    std::shared_ptr<TextItem> text2 =
+		 std::make_shared<Underline>(std::make_shared<Bold>(
+		    std::make_shared<Italic>(span1)));
 
-    std::cout << std::endl<< std::endl<< span1->render() << std::endl<< std::endl;
-    std::cout << std::endl<< std::endl<< text1->render() << std::endl<< std::endl;
-    std::cout << std::endl<< std::endl<< text2->render() << std::endl<< std::endl;
+    std::cout << std::endl<< std::endl<< span1->render() << std::endl;
+    std::cout << std::endl<< std::endl<< text1->render() << std::endl;
+    std::cout << std::endl<< std::endl<< text2->render() << std::endl;
 }
