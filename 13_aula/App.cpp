@@ -15,7 +15,7 @@ int main(){
 
 
   std::shared_ptr<Client> c1=std::make_shared<Client>(currTime,1111111,"Joao");
-  std::shared_ptr<Client> c2=std::make_shared<Client>(tenYears,9999999,"Jota ");
+  std::shared_ptr<Client> c2=std::make_shared<Client>(tenYears,9999999,"Jota");
   store->addClient(c1);
   store->addClient(c2);
 
@@ -30,9 +30,9 @@ int main(){
 
 
   c1->addPurchase(p1);
-
   c1->addPurchase(p2);
   c1->addPurchase(p3);
+
   c2->addPurchase(p4);
 
 
@@ -46,9 +46,9 @@ int main(){
 
   }
 
-  std::shared_ptr<Filter> f3 = std::make_shared<XPoints>(400);
-  std::list< std::shared_ptr<Client> > listaPontos50 = store->getList(f3);
-  for (i = listaPontos50.begin(); i != listaPontos50.end(); ++i) {
+  std::shared_ptr<Filter> f3 = std::make_shared<XPoints>(100);
+  std::list< std::shared_ptr<Client> > listaPontos400 = store->getList(f3);
+  for (i = listaPontos400.begin(); i != listaPontos400.end(); ++i) {
       std::shared_ptr<Client> cliente = *i;
       cliente->setDiscount(0.50);
       std::cout << cliente->getName() << std::endl;

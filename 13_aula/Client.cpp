@@ -10,7 +10,7 @@ private:
 	long int _contact;
 	std::time_t _birthday;
 	std::time_t _firstBuy;
-  std::list< std::shared_ptr<Purchase> > _purchases;
+	std::list< std::shared_ptr<Purchase> > _purchases;
 	int _points;
 	float _discount = 0;
 public:

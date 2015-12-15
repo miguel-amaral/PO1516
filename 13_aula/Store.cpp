@@ -5,7 +5,7 @@
 class Store {
 private:
 	std::string _name;
-  std::list< std::shared_ptr<Client> > _clients;
+	std::list< std::shared_ptr<Client> > _clients;
 public:
 	Store(std::string name) : _name(name){}
 	void addClient(std::shared_ptr<Client> c){

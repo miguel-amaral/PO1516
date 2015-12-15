@@ -1,0 +1,64 @@
+#!/bin/bash
+
+echo -n -e "/* ------------------- */\n" > final.cpp;
+echo -n -e "/*   Aluno    78865    */\n" >> final.cpp;
+echo -n -e "/*   Miguel   Amaral   */\n" >> final.cpp;
+echo -n -e "/* Quarta Feira 15h30  */\n" >> final.cpp;
+echo -n -e "/* ------------------- */\n\n\n" >> final.cpp;
+
+echo -n -e "/* ------------------- */\n" >> final.cpp;
+echo -n -e "/*  PaymentMethod.cpp  */\n" >> final.cpp;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat PaymentMethod.cpp >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+                    ###                                   #####
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*    ProductType.cpp  */\n" >> final.cpp;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat ProductType.cpp   >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*    Purchase.cpp     */\n" >> final.cpp ;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat Purchase.cpp >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+
+
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*      Filter.hpp     */\n" >> final.cpp ;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat Filter.hpp       >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*      Filter.cpp     */\n" >> final.cpp ;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat Filter.cpp  >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*     Client.cpp      */\n" >> final.cpp ;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat Client.cpp     >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*      Store.cpp      */\n" >> final.cpp ;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat Store.cpp     >> final.cpp;
+echo -n -e "\n" >> final.cpp;
+
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+echo -n -e "/*       App.cpp       */\n" >> final.cpp ;
+echo -n -e "/* ------------------- */\n" >>final.cpp;
+cat App.cpp >> final.cpp;
+
+#include "TextSpan.cpp"
+#include "TextFormat.cpp"
+#include "Bold.cpp"
+#include "Underline.cpp"
+#include "Italic.cpp"
+#include "main.cpp"
+
+cat final.cpp;
