@@ -1,6 +1,6 @@
 #include <string>
 #include "Client.cpp"
-#include "Filter.cpp"
+#include "Filter.hpp"
 
 class Store {
 private:
@@ -13,6 +13,16 @@ public:
 	}
 
 	std::list< std::shared_ptr<Client> > getList(std::shared_ptr<Filter> filter){
-		return filter->getFilteredList(_clients);
+		return filter->getFilteredList(this);
 	}
+
+	std::shared_ptr<Client> getClient(int index) {
+		std::list<std::shared_ptr<Client>>::iterator i = _clients.begin();
+		std::advance(i, index);
+		return *i;
+}
+
+int getSize() {
+		return _clients.size();
+}
 };

@@ -19,17 +19,25 @@ public:
 		_points = 0;
 	}
 	void addPurchase(std::shared_ptr<Purchase> p){
-		_purchases.push_back(std::move(p));
-		_points += p->getValue();
+		_points = _points + p->getValue();
 		if(_firstBuy){
 			_firstBuy = p->getDate();
 		}
+		_purchases.push_back(std::move(p));
 	}
+
 	void setDiscount(double discount){
 		_discount = discount;
 	}
 
-	int getPoints(){return points;}
+	int getPurchaseListSize(){
+		return _purchases.size();
+	}
+
+	int getPoints(){return _points;}
+	void setPoints(int points){ _points = points;}
+
+	std::string getName(){return _name;}
 
 
 };
